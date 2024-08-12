@@ -1,0 +1,638 @@
+#include <iostream>
+
+int main() {
+
+//user input variables
+
+    int choice1 = 0;
+    int choice2 = 0;
+    int choice_left1 = 0;
+    int choice_right1 = 0;
+    int choice_gun = 0;
+    int choice_axe = 0;
+    int weapon = 0;
+    int tries = 0;
+
+    //opening
+
+    std::cout << "                                   ===================================\n";
+    std::cout << "                                   >>>>>>SOMEWHERE IN THE FOREST<<<<<<\n";
+    std::cout << "                                   ---a quick horror text adventure---\n";
+    std::cout << "                                   >>>>>>>>>>by datpeter ton<<<<<<<<<<\n";
+    std::cout << "                                   ===================================\n\n";
+
+    std::cout << "                                         Press ENTER to continue\n\n";
+    std::cin.get();
+
+    std::cout << "Your eyes flutter open. Darkness. You feel cold, wet soil pressing against your face. You try to push yourself\n";
+    std::cout << "off the ground, but your body hasn't quite woken up yet. It aches. With deep breaths, you coax your muscles to\n";
+    std::cout << "comply to sit yourself upright. A cold breeze whisks by, and you start to shiver. You look to the sky. Large\n";
+    std::cout << "trees tower over you, bending inward as if they were made to entrap you.\n\n";
+    std::cout << "You try to remember what happened before you ended up here, but nothing materializes. Who would leave you here?\n";
+    std::cout << "And why? But you can't dwell on that right now. You have to find a way out of here. You get up and pat yourself\n";
+    std::cout << "down. From your inner jacket pocket, you find your phone. Thank the Gods. No signal. Fuck. At least you now have\n";
+    std::cout << "a flashlight to see. You shine the light ahead, and see three separate paths. Naturally.\n\n";
+    std::cout << "Which path should you take?\n\n";
+
+    std::cout << "1. The left path\n";
+    std::cout << "2. The path forward\n";
+    std::cout << "3. The right path\n\n";
+
+    std::cout << "Enter a number (1-3): ";
+    std::cin >> choice1;
+    std::cout << "\n\n";
+
+    //invalid answer loop (left choice)
+    for (int tries = 1; tries <= 3 && (choice1 < 1 || choice1 > 3); tries++) {
+        
+        if (tries == 3) {
+
+            std::cout << "Invalid choice. A mysterious dark figure swallows you. You die.\n\n";
+
+            std::cout << "GAME OVER\n\n";
+
+            std::cout << "Press ENTER to exit.\n";
+            std::cin.get();
+            std::cin.get();
+
+            return 0;
+        }
+        else {
+        
+        std::cout << "Invalid choice. Try again.\n";
+        std::cout << "1. The left path\n";
+        std::cout << "2. The path forward\n";
+        std::cout << "3. The right path\n\n";
+
+        std::cout << "Enter a number (1-3): ";
+        std::cin >> choice1;
+        std::cout << "\n\n";
+
+        }
+
+    }
+
+    //the left path
+    if (choice1 == 1) {
+
+        std::cout << "**********************\n";
+        std::cout << "You take the left path. The sounds of the forest begin to dampen around you. Yet the leaves crunch louder\n";
+        std::cout << "under your feet with every step. You start running. The foilage thickens and envelopes your periphery. Even\n";
+        std::cout << "your phone light seems to dim. The weight of the darkness irises in on you. The trees narrow closer and\n";
+        std::cout << "closer as the branches and vines weave together, fencing you in. Shit. It's a dead end.\n\n";
+        std::cout << "You catch your breath and look around. The forest is so dense now, the only clear way to go is back where\n";
+        std::cout << "you came from.\n\n";
+
+        std::cout << "Suddenly, you hear rustling behind you. You freeze. You don't dare to look behind you.\n\n";
+
+        std::cout << "Silence.\n\n";
+
+        std::cout << "A loud SCREECH pierces the air. It's moving closer to you. You look ahead an find a small opening between the\n";
+        std::cout << "vines and squeeze yourself through. You conceal your phone light and hide behind the tree trunks. You calm your\n";
+        std::cout << "breathing and listen for awhile.\n\n";
+
+        std::cout << "InOut. InOut. InOut. InOut. In. Out. In. Out. In. Out. In... Out...\n\n";
+
+        std::cout << "There's nothing but the breeze of the wind and the light rustling of the trees. You sigh. Whatever that was is\n";
+        std::cout << "probably gone. Or you hope. You notice that your arms and body are unusually wet. You frantically pull out your\n";
+        std::cout << "phone. Your arms and torso are drenched in blood, but you don't notice a wound or feel any pain. You turn your\n";
+        std::cout << "light around. The tree trunks around you are dripping in fresh blood. The smell of rot creeps up your nose.\n";
+        std::cout << "Hesitantly, you follow the blood stains and find a dead body crushed against a tree trunk. Their face smashed\n";
+        std::cout << "into the bark; their spine cracked in half, and right arm hanging by a tendon. You swallow to keep yourself from\n";
+        std::cout << "vomiting. You notice there is a gun in their right hand. You hear rustling closeby. You start to panic.\n\n";
+
+        std::cout << "What do you do?\n\n";
+
+        std::cout << "1. Scream for help\n";
+        std::cout << "2. Pick up the gun and run\n\n";
+        
+        std::cout << "Enter a number (1 or 2): ";
+        std::cin >> choice_left1;
+        std::cout << "\n\n";
+
+        //invalid answer loop (left choice)
+        for (int tries = 1; tries <= 3 && (choice_left1 < 1 || choice_left1 > 2); tries++) {
+        
+            if (tries == 3) {
+
+                std::cout << "Invalid choice. A large tree branch pierces you in the back through your stomach. You die.\n\n";
+
+                std::cout << "GAME OVER\n\n";
+
+                std::cout << "Press ENTER to exit.\n";
+                std::cin.get();
+                std::cin.get();
+
+                return 0;
+            }
+            else {
+        
+                std::cout << "Invalid choice. Try again.\n";
+                std::cout << "1. Scream for help\n";
+                std::cout << "2. Pick up the gun and run\n\n";
+
+                std::cout << "Enter a number (1 or 2): ";
+                 std::cin >> choice_left1;
+                 std::cout << "\n\n";
+
+            }
+
+        }
+
+        //scream for help
+        if (choice_left1 == 1) {
+
+            std::cout << "**********************\n";
+            std::cout << "You let out a cry for help. As your wail echoes through the tree branches, you wonder if that was a mistake.\n";
+            std::cout << "The forest shudders and becomes still. The only sounds you hear is your breathing. The light on your phone\n";
+            std::cout << "flickers off. The shadows of the forest wrap around you as you fade away. Through the darkness, you see what\n";
+            std::cout << "seems to be a pair of glowing eyes. You disappear.\n\n";
+            std::cout << "The trees shake and rustle in the wind.\n\n";
+
+            std::cout << "GAME OVER\n\n";
+            
+            std::cout << "Press ENTER to exit.\n";
+            std::cin.get();
+            std::cin.get();
+
+            return 0;
+
+        }
+        //grab the gun
+        else if (choice_left1 == 2) {
+
+            weapon = weapon + 1;
+
+            std::cout << "**********************\n";
+            std::cout << "You pry the gun out of the body's cold hands and check the chamber. Two bullets. Better not miss.\n\n";
+
+        }
+
+    }
+    //the path forward
+    else if (choice1 == 2) {
+
+        std::cout << "**********************\n";
+        std::cout << "You move forward. The path isn't as straight as it first seemed. The trees wind you back and forth through\n";
+        std::cout << "a maze. The way behind you disappear in the shadows. The sky above obsecured with thick branches. No turning\n";
+        std::cout << "back now. You pick up the pace. You don't know how long you've been on this path. The trees looks sinisterly\n";
+        std::cout << "uniform, and there's no telling what direction you're heading. The shadows lap at your feet. Branches crunch\n";
+        std::cout << "on the ground behind you. They get louder and louder. You feel what you can only describe as a hot breath on\n";
+        std::cout << "your neck. You shiver and start sprinting, looking back to see only the darkness staring back at you. You run\n";
+        std::cout << "into a fork in the path. There is a dim light to your left and more trees to your right. Which way do you take?\n";
+        std::cin.get();
+        std::cin.get();
+        std::cout << "CRACK. Two trees descend down on you. You jump out of the way in the nick time. The trees block the left path.\n";
+        std::cout << "The light dims. Looks like the decision was made for you. You head down to the path on the right.\n\n";
+
+    }
+    //the right path
+    else if (choice1 == 3) {
+
+        std::cout << "**********************\n";
+        std::cout << "You stumble over to the right path. Your focus pulses in and out as your heartbeat banging against your temples.\n";
+        std::cout << "Haze rolls in and quickly obscures your view, the trees seem to stretch past the horizon. You brace yourself\n";
+        std::cout << "against a tree trunk, desparately gathering your bearings. You look up and see black smoke swirl together with\n";
+        std::cout << "the haze. The smell of pine surges through the air. Something's burning. You follow the smell, but the haze feels\n";
+        std::cout << " as ifit's pushing you along. You let it guide you through the infinite trees.\n\n";
+        
+        std::cout << "You must have been walking for miles until the haze suddenly dissapates, revealing an open field. Your eyes\n";
+        std::cout << "adjust. There is some kind of large structure in the middle of the field. You approach it. A bloodied stone\n";
+        std::cout << "table sits in the middle of three stone pillars that are arranged in a triangle. An axe wet with fresh blood is\n";
+        std::cout << "lodged in the side of the table. The pillars looks like they burrowed themselves up from underground. Candles\n";
+        std::cout << "litter the floor in triangular patterns, smoke hissing from the wick. It seems like this space was used recently,\n";
+        std::cout << "and whoever used it left hastily. An open face down small black book lies on the floor next to the stone table,\n";
+        std::cout << "the cover stained bright red. You feel a heaviness in the air. What do you do?\n\n";
+
+        std::cout << "1. Get out of there.\n";
+        std::cout << "2. Examine the pillars.\n";
+        std::cout << "3. Inspect the table.\n";
+        std::cout << "4. Look at the book.\n";
+        std::cout << "5. Grab the axe.\n\n";
+
+        std::cout << "Enter a number (1-5): ";
+        std::cin >> choice_right1;
+        std::cout << "\n\n";
+
+        //invalid answer loop (right choice)
+        for (int tries = 1; tries <= 3 && (choice_right1 < 1 || choice_right1 > 5); tries++) {
+        
+            if (tries == 3) {
+
+                std::cout << "Invalid choice. A shadow pulls you down underground. You die.\n\n";
+
+                std::cout << "GAME OVER\n\n";
+
+                std::cout << "Press ENTER to exit.\n";
+                std::cin.get();
+                std::cin.get();
+
+                return 0;
+
+            }
+            else {
+        
+                std::cout << "Invalid choice. Try again.\n\n";
+                std::cout << "1. Get out of there.\n";
+                std::cout << "2. Examine the pillars.\n";
+                std::cout << "3. Inspect the table.\n";
+                std::cout << "4. Look at the book.\n";
+                std::cout << "5. Grab the axe.\n\n";
+
+                std::cout << "Enter a number (1-5): ";
+                std::cin >> choice_right1;
+                std::cout << "\n\n";
+
+            }
+        
+        }
+
+        //choice loop (answers 2-5)
+        for (int tries = 1; tries <= 3 && (choice_right1 > 1 || choice_right1 < 6) && choice_right1 != 1; tries++) {
+
+            //stayed too long
+            if(tries == 3) {
+
+                std::cout << "Something has been watching and waiting for you.\n\n";
+
+                std::cout << "You turn around and lock in on a pair of glowing eyes. Before you can register what it is, it's too late.\n\n";
+               
+                std::cout << "The eyes beckon you. You have no choice but to comply. You walk towards them. The eyes grow larger as you\n";
+                std::cout << "approach. Your vision darkens as you fade away into the trees.\n\n";
+               
+                std::cout << "The forest falls silent.\n\n";
+
+                std::cout << "GAME OVER\n\n";
+
+                std::cout << "Press ENTER to exit.\n";
+                std::cin.get();
+                std::cin.get();
+
+                return 0;
+
+            }
+            //pillars
+            else if (choice_right1 == 2) {
+
+                std::cout << "You go to examine one of the pillars. Its shape reminds you of a behemoth's horn. As you get closer, you hear a\n";
+                std::cout << "soft hum coming out from within. You cautiously reach out your hand and touch the pillar. A soft vibration buzzes\n";
+                std::cout << "through your fingertips and into your palm. You wait a second. Nothing happens. You run your hand through the\n";
+                std::cout << "grooves. As you do, you notice some symbols carved all over the pillar. They are caked in dirt and old blood. You\n";
+                std::cout << "look up. All three pillars are angled toward each other almost completing a pyramid shape. They seem to emit a\n";
+                std::cout << "pulsing faint blue glow. It's almost serene.\n\n";
+
+            }
+            //table
+            else if (choice_right1 == 3) {
+
+                std::cout << "Fresh blood and candle wax drips off the side of the triangular stone table. It is empty except for the three\n";
+                std::cout << "candles placed in the corners of the table. There is so much blood. You take a closer look at it. The splatters\n";
+                std::cout << "seem to burst outward from the middle. From the looks of the set up and the axe, someone - or something - was\n";
+                std::cout << "butchered right here, and very recently. You shudder to think about it.\n\n";
+
+            }
+            //book
+            else if (choice_right1 == 4) {
+
+                std::cout << "You pick up the book, using your hand to bookmark where the book fell open. It's thick for how small it is. It must\n";
+                std::cout << "have been more than a thousand pages. It's wet. Ew. Although it seems blood-soaked, the pages are curiously spotless\n";
+                std::cout << "The cover is thick. It's made with black leather, soft from use, but otherwise in good condition. You open the book.\n";
+                std::cout << "It's filled with symbols from a language that is not of this world. In the center of the page is a diagram with hand-\n";
+                std::cout << "written symbols around it. You look up. The arrangement of the pillars, table, and candles are laid out exact as they\n";
+                std::cout << "are in the book. You throw the book down the ground. A wave of uneasiness creeps up your spine.\n\n";
+
+            }
+            //axe
+            else if (choice_right1 == 5) {
+
+                weapon = weapon + 2;
+
+                std::cout << "The axe is lodged into the stone support under the table. You brace one foot on the table and grip the axe firmly.\n";
+                std::cout << "With much effort, you manage to yank the axe out. The crack in the stone table glows faintly and dissapates. You\n";
+                std::cout << "inspect blade of the axe. It's a bit dull, but it'll do. You take the axe with you.\n\n";
+
+                //warning tries
+                if (tries == 1 && choice_right1 == 5) {
+
+                    std::cout << "You feel a presence around you. It's probably nothing.\n\n";
+
+                    std::cout << "What do you do next?\n\n";
+
+                    std::cout << "1. Get out of there.\n";
+                    std::cout << "2. Examine the pillars.\n";
+                    std::cout << "3. Inspect the table.\n";
+                    std::cout << "4. Look at the book.\n\n";
+
+                    std::cout << "Enter a number (1-4): ";
+                    std::cin >> choice_right1;
+                    std::cout << "\n\n";
+
+                }
+                else if (tries == 2 && choice_right1 == 5) {
+
+                    std::cout << "There is something rustling in the trees behind you. You might want to hurry up.\n\n";
+
+                    std::cout << "What do you do next?\n\n";
+
+                    std::cout << "1. Get out of there.\n";
+                    std::cout << "2. Examine the pillars.\n";
+                    std::cout << "3. Inspect the table.\n";
+                    std::cout << "4. Look at the book.\n";
+
+                    std::cout << "Enter a number (1-4): ";
+                    std::cin >> choice_right1;
+                    std::cout << "\n\n";
+
+                }
+
+                //axe choice loop
+                for (int tries = 2; tries <= 3 && (choice_right1 > 1 || choice_right1 < 5) && choice_right1 != 1; tries++) {
+                    
+                    //invalid answer insta death (right path with axe choice)
+                    if (choice_right1 < 1 || choice_right1 > 5) {
+
+                        std::cout << "Invalid choice. The candles around you combust and light the area you're in on fire. You can't escape.\n\n";
+
+                        std::cout << "GAME OVER\n\n";
+
+                        std::cout << "Press ENTER to exit.\n";
+                        std::cin.get();
+                        std::cin.get();
+
+                        return 0;
+
+                    }
+                
+                    //stayed too long
+                    if(tries == 3) {
+
+                    std::cout << "Something has been watching and waiting for you.\n\n";
+
+                    std::cout << "You turn around and lock in on a pair of glowing eyes. Before you can register what it is, it's too late.\n\n";
+               
+                    std::cout << "The eyes beckon you. You have no choice but to comply. You walk towards them. The eyes grow larger as you\n";
+                    std::cout << "approach. Your vision darkens as you fade away into the trees.\n\n";
+               
+                    std::cout << "The forest falls silent.\n\n";
+
+                    std::cout << "GAME OVER\n\n";
+
+                    std::cout << "Press ENTER to exit.\n";
+                    std::cin.get();
+                    std::cin.get();
+
+                    return 0;
+
+                    }
+                    //pillars
+                    else if (choice_right1 == 2) {
+
+                        std::cout << "You go to examine one of the pillars. Its shape reminds you of a behemoth's horn. As you get closer, you hear a\n";
+                        std::cout << "soft hum coming out from within. You cautiously reach out your hand and touch the pillar. A soft vibration buzzes\n";
+                        std::cout << "through your fingertips and into your palm. You wait a second. Nothing happens. You run your hand through the\n";
+                        std::cout << "grooves. As you do, you notice some symbols carved all over the pillar. They are caked in dirt and old blood. You\n";
+                        std::cout << "look up. All three pillars are angled toward each other almost completing a pyramid shape. They seem to emit a\n";
+                        std::cout << "pulsing faint blue glow. It's almost serene.\n\n";
+
+                    }
+                    //table
+                    else if (choice_right1 == 3) {
+
+                        std::cout << "Fresh blood and candle wax drips off the side of the triangular stone table. It is empty except for the three\n";
+                        std::cout << "candles placed in the corners of the table. There is so much blood. You take a closer look at it. The splatters\n";
+                        std::cout << "seem to burst outward from the middle. From the looks of the set up and the axe, someone - or something - was\n";
+                        std::cout << "butchered right here, and very recently. You shudder to think about it.\n\n";
+
+                    }
+                    //book
+                    else if (choice_right1 == 4) {
+
+                        std::cout << "You pick up the book, using your hand to bookmark where the book fell open. It's thick for how small it is. It must\n";
+                        std::cout << "have been more than a thousand pages. It's wet. Ew. Although it seems blood-soaked, the pages are curiously spotless\n";
+                        std::cout << "The cover is thick. It's made with black leather, soft from use, but otherwise in good condition. You open the book.\n";
+                        std::cout << "It's filled with symbols from a language that is not of this world. In the center of the page is a diagram with hand-\n";
+                        std::cout << "written symbols around it. You look up. The arrangement of the pillars, table, and candles are laid out exact as they\n";
+                        std::cout << "are in the book. You throw the book down the ground. A wave of uneasiness creeps up your spine.\n\n";
+
+                    }
+
+                    if (tries == 2) {
+
+                        std::cout << "There is something rustling in the trees behind you. You might want to hurry up.\n\n";
+
+                        std::cout << "What do you do next?";
+
+                        std::cout << "1. Get out of there.\n";
+                        std::cout << "2. Examine the pillars.\n";
+                        std::cout << "3. Inspect the table.\n";
+                        std::cout << "4. Look at the book.\n\n";
+
+                        std::cout << "Enter a number (1-4): ";
+                        std::cin >> choice_right1;
+                        std::cout << "\n\n";
+
+                    }
+
+                }
+
+            }
+
+            //warning tries
+            if (tries == 1 && choice_right1 != 5 && choice_right1 != 1) {
+
+                std::cout << "You feel a presence around you. It's probably nothing.\n\n";
+
+                std::cout << "What do you do next?\n\n";
+
+                std::cout << "1. Get out of there.\n";
+                std::cout << "2. Examine the pillars.\n";
+                std::cout << "3. Inspect the table.\n";
+                std::cout << "4. Look at the book.\n";
+                std::cout << "5. Grab the axe.\n\n";
+
+                std::cout << "Enter a number (1-5): ";
+                std::cin >> choice_right1;
+                std::cout << "\n\n";
+
+            }
+            else if (tries == 2 && choice_right1 != 5 && choice_right1 != 1) {
+
+                std::cout << "There is something rustling in the trees behind you. You might want to hurry up.\n\n";
+
+                std::cout << "What do you do next?\n\n";
+
+                std::cout << "1. Get out of there.\n";
+                std::cout << "2. Examine the pillars.\n";
+                std::cout << "3. Inspect the table.\n";
+                std::cout << "4. Look at the book.\n";
+                std::cout << "5. Grab the axe.\n\n";
+
+                std::cout << "Enter a number (1-5): ";
+                std::cin >> choice_right1;
+                std::cout << "\n\n";
+
+            }
+
+        }
+
+        //leave (get out)
+        if (choice_right1 == 1) {
+
+            std::cout << "**********************\n";
+            std::cout << "You're not sticking around for this shit. There's another path past the structure, and you quickly make your\n";
+            std::cout << "way towards it, focusing on getting yourself out.\n\n";
+
+        }
+
+    }
+            
+    //the paths converge
+    if (choice1 == 2) {
+
+        std::cout << "**********************\n";
+
+    }
+    std::cout << "You rush ahead, ";
+    if (weapon == 1) {
+
+        std::cout << "holding your gun and phone light at the ready. ";
+
+    }
+    else if (weapon == 2) {
+
+        std::cout << "confidiently leading with your newly acquired axe. ";
+
+    }
+    else {
+
+        std::cout << "shining your phone light into the wooded abyss. ";
+
+    }
+    std::cout << "A feeling of a presence following you grows\n";
+    std::cout << "stronger. You increase your speed. Branches start snapping around you. *SNAP* *SNAP* *SNAP* You try to see what's\n";
+    std::cout << "going on behind you. Something is following you. A large figure weaves quickly through the trees. You sprint. A\n";
+    std::cout << "deep, unearthly groan vibrates from under your feet. The trees buzz with the sound of shaking leaves. You look down.\n";
+    std::cout << "Tree roots claw through the surface as the tree behind you tumble to the ground. Your foot gets caught on a tree\n";
+    std::cout << "root. You trip, but catch yourself quickly.Looking back, you see the figure get closer. You finally face this\n";
+    std::cout << "dark silhouette.\n\n";
+
+    std::cout << "A pair of blue eyes pierce through the darkness. You catch its gaze. It's mesmerizing. You're immobilized,\n";
+    std::cout << "transfixed on its stare. It almost feels like wavelengths are pulsing out from its eyes. They suddenly turn\n";
+    std::cout << "emerald green, and you snap out of it.\n\n";
+
+    std::cout << "What are you gonna do?\n\n";
+
+    std::cout << "1. Turn around and run.\n";
+    std::cout << "2. Find a place to hide.\n";
+    //gun was picked up
+    if (weapon == 1) {
+        
+        std::cout << "3. Shoot it.\n";
+
+        std::cout << "\nEnter a number (1-3): ";
+        std::cin >> choice_gun;
+        std::cout << "\n\n";
+    
+    }
+    //axe was picked up
+    else if (weapon == 2) {
+
+        std::cout << "3. Swing the axe at it.\n";
+
+        std::cout << "\nEnter a number (1-3): ";
+        std::cin >> choice_axe;
+        std::cout << "\n\n";
+
+    }
+    //you're fucked
+    else {
+
+    std::cout << "\n";
+    std::cout << "Enter a number (1 or 2): ";
+    std::cin >> choice2;
+    std::cout << "\n\n";
+
+    }
+
+    //run ending
+    if (choice2 == 1 || choice_gun == 1 || choice_axe == 1) {
+
+        std::cout << "**********************\n";
+        std::cout << "You keep running. The trees feel endless, and the figure is gaining distance on you. Your stamina is waning, and\n";
+        std::cout << "there is no path out in sight. The roots in the ground whip up and grab you by the ankles. You fall, and roots grow\n";
+        std::cout << "to pin you down at your arms. The figure approaches. It descends on you, its eyes wide open. You can't look away.\n";
+        std::cout << "They grow larger. The green glow starts to blind you. Then, pure darkness\n\n";
+
+        std::cout << "GAME OVER\n\n";
+
+        std::cout << "Press ENTER to exit.\n";
+        std::cin.get();
+        std::cin.get();
+
+        return 0;
+
+    }
+    //hide ending
+    else if (choice2 == 2 || choice_gun == 2 || choice_axe == 2) {
+
+        std::cout << "**********************\n";
+        std::cout << "You turn a corner and get out of view from the eyes. You hop over a huge fallen tree trunk and cower down. You\n";
+        std::cout << "cover your mouth to silence your breathing. The figure moves past you. You wait for silence. It seems that the\n";
+        std::cout << "coast is clear. You let out a sigh of relief and come out from behind the tree trunk. Coming up, a pair of green\n";
+        std::cout << "is staring right at you. You gasp, but immediately get knocked out.\n\n";
+
+        std::cout << "Your eyes flutter open. Darkness. You feel cold, wet soil pressing against your face.\n\n";
+
+        std::cout << "GAME OVER\n\n";
+
+        std::cout << "Press ENTER to exit.\n";
+        std::cin.get();
+        std::cin.get();
+
+        return 0;
+
+    }
+    //gun ending
+    else if (choice_gun == 3) {
+
+        std::cout << "**********************\n";
+        std::cout << "Shaking, you aim the gun square between its eyes. Your light begins to flicker. The figure manifests a mouth from\n";
+        std::cout << "the shadows. Its jaw descends down to the ground. Fuck this. It's too unsettling, and you're not going to wait around\n";
+        std::cout << "for it to transform or do whatever it is doing. You shoot two shots in each of its eyes. It explodes into a shadowy\n";
+        std::cout << "aura. A strong burst of gusts pushes you back, and you fall unconscious.\n\n";
+
+        std::cout << "You wake up, sweating. You're in your bed. The sun is rising.\n\n";
+
+        std::cout << "GAME OVER\n\n";
+
+        std::cout << "Press ENTER to exit.\n";
+        std::cin.get();
+        std::cin.get();
+
+        return 0;
+
+    }
+    //axe ending
+    else if (choice_axe == 3) {
+
+        std::cout << "**********************\n";
+        std::cout << "It's time to fight back. You ready your axe. The figure lets out a bellowing howl, and your light shuts off. The only\n";
+        std::cout << "you can see is its eyes. You take a deep breath and raise the axe over your shoulders. With as much force as you can\n";
+        std::cout << "muster, you swing your axe between its eyes. You hear a wet crunch. It connects. The figure roars in pain. You cover\n";
+        std::cout << "your ears as everything rumbles and vibrates around you. A cyclone of shadows spirals out from its axe wound, dissolving\n";
+        std::cout << "it into the air. The darkness retreats. The trees settle. The sky opens up, and the sun rises, light filling up the forest.\n";
+        std::cout << "You collapse to your knees. It's over you hope. It's silent.\n\n";
+
+        std::cout << "Your phone pings with a notification that echos through the trees.\n\n";
+
+        std::cout << "GAME OVER\n\n";
+
+        std::cout << "Press ENTER to exit.\n";
+        std::cin.get();
+        std::cin.get();
+
+        return 0;
+
+    }
+
+}
